@@ -1,7 +1,7 @@
 {
-  "name": "expressvitetemplate",
+  "name": "project-edge-website",
   "version": "1.0.0",
-  "description": "Basic template for having Vite Frontend & Express Backend",
+  "description": "Static website for Project Edge eliminating the need for Discord",
   "main": "index.js",
   "scripts": {
     "dev": "node .",
@@ -23,9 +23,9 @@
   "author": "Subie",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Subie1/ExpressViteTemplate/issues"
+    "url": "https://github.com/Subie1/ProjectEdgeWebsite/issues"
   },
-  "homepage": "https://github.com/Subie1/ExpressViteTemplate#readme",
+  "homepage": "https://github.com/Subie1/ProjectEdgeWebsite#readme",
   "dependencies": {
     "dotenv": "^16.3.1"
   }
