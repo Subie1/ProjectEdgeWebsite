@@ -4,23 +4,20 @@
 
 @layer base {
     :root {
-        @apply dark;
+        --tw-bg-opacity: 1;
+        --text: 15 15 15;
+        --background: 255 255 255;
+        --primary: 255 105 75;
+        --secondary: 196 227 156;
+        --accent: 112 214 113;
     }
 
     .dark {
-        --text: #eee7e7;
-        --background: #090a0b;
-        --primary: #bedead;
-        --secondary: #b7b7a4;
-        --accent: #adc178;
-    }
-
-    .light {
-        --text: #181111;
-        --background: #f4f5f6;
-        --primary: #99e072;
-        --secondary: #b1bfb0;
-        --accent: #98aca3;
+        --text: 235 233 252;
+        --background: 17 17 17;
+        --primary: 255 115 59;
+        --secondary: 38 38 38;
+        --accent: 77 211 126;
     }
 }
 
