@@ -13,7 +13,7 @@ export default function Credits() {
         (async () => {
             let previous = parsed;
             for (const user of credits) {
-                const { data } = await axios.get(`https://dashboard.botghost.com/api/public/tools/user_lookup/${user.id}`, { headers: { "Allow-Origin": true } });
+                const { data } = await axios.get(`https://discordlookup.mesavirep.xyz/v1/user/${user.id}`);
                 previous = { values: [...previous.values, { name: data.global_name, social: data.username, role: user.role }] }
             }
             setParsed(previous);
