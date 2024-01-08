@@ -14,7 +14,7 @@ export default function Credits() {
             let previous = parsed;
             for (const user of credits) {
                 const { data } = await axios.get(`https://discordlookup.mesavirep.xyz/v1/user/${user.id}`);
-                previous = { values: [...previous.values, { name: data.global_name, social: data.username, role: user.role }] }
+                previous = { values: [...previous.values, { name: data.global_name, social: data.tag.split("#")[0], role: user.role }] }
             }
             setParsed(previous);
             setLoading(false);
