@@ -27,14 +27,15 @@ export default function Credits() {
 					],
 				};
 			}
+
 			setParsed(previous);
 			setLoading(false);
 		})();
 	}, []);
 
 	return (
-		<div className="flex flex-col gap-2 items-center w-[calc(100%-100px)] justify-center border-t border-b border-primary p-6 rounded-lg">
-			<header className="text-2xl font-bold"># Credits</header>
+		<div className="flex flex-[0.7_0.7_0%] flex-col md:flex-none gap-10 md:gap-2 items-start md:items-center w-full md:w-[calc(100%-100px)] justify-center border-t border-b border-primary p-6 rounded-lg">
+			<header className="text-2xl font-bold text-center w-full"># Credits</header>
 			{parsed.values.length ? (
 				parsed.values.map((person) => (
 					<div
@@ -50,7 +51,9 @@ export default function Credits() {
 					</div>
 				))
 			) : (
-				<LoadingDots />
+				<div className="w-full h-full flex items-center justify-center">
+					<LoadingDots />
+				</div>
 			)}
 			<div></div>
 			<div></div>

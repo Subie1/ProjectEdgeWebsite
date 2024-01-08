@@ -2,13 +2,14 @@ import { useContext } from "react";
 import Credits from "../layout/components/Credits";
 import ToothlessParallax from "../layout/components/ToothlessParallax";
 import { context } from "../lib/Context";
+import Icon from "../layout/components/Icons";
 
 export default function Home() {
 	const { setPage } = useContext(context);
 
 	return (
 		<main className="w-full overflow-hidden h-full flex">
-			<div className="h-full flex flex-col gap-3 flex-1 md:p-10 items-center justify-between relative">
+			<div className="h-full flex flex-col gap-3 flex-1 md:p-10 items-center justify-center md:justify-between relative">
 				<div className="flex flex-col gap-3">
 					<header className="text-4xl text-center font-bold gap-10 flex items-center justify-center">
 						<span className="relative flex items-center justify-center">
@@ -34,15 +35,20 @@ export default function Home() {
 				<div className="flex gap-4 w-full items-center justify-center text-xs md:text-sm">
 					<a
 						href={import.meta.env.VITE_DISCORD_INVITE}
-						className="px-4 py-2 bg-gradient-to-r from-primary to-accent text-background rounded-md cursor-pointer hover:scale-95 transition-all duration-300"
+						className="px-4 py-2 scale-105 bg-gradient-to-r from-accent to-primary text-background rounded-md cursor-pointer hover:scale-100 transition-all duration-300"
 					>
 						Join our Discord
 					</a>
-					<a
-						onClick={() => setPage(1)}
-						className="px-4 py-2 border border-text rounded-md cursor-pointer hover:scale-95 transition-all duration-300"
-					>
-						Download
+					<a onClick={() => setPage(1)} className="cursor-pointer group flex">
+						<div className="w-9 rounded-md border border-text flex items-center justify-center text-lg group-hover:scale-0 transition-all duration-300">
+							<Icon name="TbDownload" />
+						</div>
+						<span className="scale-100 px-4 py-2 border border-text rounded-md cursor-pointer hover:scale-95 transition-all duration-300">
+							Download
+						</span>
+						<div className="w-9 rounded-md border border-text flex items-center justify-center text-lg group-hover:scale-100 scale-0 transition-all duration-300">
+							<Icon name="TbDownload" />
+						</div>
 					</a>
 				</div>
 			</div>

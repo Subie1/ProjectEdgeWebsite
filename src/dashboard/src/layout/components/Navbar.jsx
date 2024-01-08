@@ -6,7 +6,18 @@ export default function Navbar() {
 	const { page, setPage, theme, setTheme } = useContext(context);
 
 	return (
-		<nav className="w-full flex flex-wrap items-center justify-center md:justify-between">
+		<nav className="w-full flex p-3 gap-2 md:p-0 flex-wrap items-center justify-center md:justify-between">
+			<a
+				onClick={() =>
+					theme === "dark" ? setTheme("light") : setTheme("dark")
+				}
+				className="cursor-pointer md:hidden"
+			>
+				<Icon
+					name={theme === "dark" ? "TbSun" : "TbMoon"}
+					className="fill-text text-2xl"
+				/>
+			</a>
 			<div className="items-center justify-center gap-2 hidden md:flex bg-opacity-100">
 				<a
 					onClick={() => setPage(0)}
@@ -26,7 +37,7 @@ export default function Navbar() {
 					/>
 				</a>
 			</div>
-			<div className="flex items-center justify-center bg-opacity-100 gap-10 tracking-widest text-xs font-semibold">
+			<div className="flex items-center justify-center bg-opacity-100 gap-2 md:gap-10 tracking-widest text-xs font-semibold">
 				<a
 					onClick={() => setPage(0)}
 					className={`cursor-pointer relative transition-all rounded-xl duration-200 bg-primary text-background px-4 py-2 flex items-center justify-center ${
