@@ -5,7 +5,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.set("trust proxy", true);
 
-app.get("/ping", (_, res) => {
+app.get("/", (_, res) => {
     res.status(200).json({ message: "Pong!" });
 })
 

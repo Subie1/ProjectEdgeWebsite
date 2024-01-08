@@ -27,3 +27,5 @@ src/dashboard/dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+.vercel/*

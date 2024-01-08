@@ -1,4 +1,4 @@
-# Template to avoid repetitive making of API & Frontend
+# [Template to avoid repetitive making of API & Frontend](https://github.com/Subie1/ExpressViteTemplate)
 ## Packages used:
 ### Runner
 - Dotenv (dotenv)
@@ -24,7 +24,7 @@
 ## Installing
 - This requires `git` & `nodejs` installed.
 ```
-git clone https://github.com/Subie1/ExpressViteTemplate
+git clone 
 cd ExpressViteTemplate
 ```
 

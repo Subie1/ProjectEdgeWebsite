@@ -1,10 +1,10 @@
 {
-  "name": "expressvitetemplate",
+  "name": "project-edge-v2",
   "version": "1.0.0",
   "description": "Basic template for having Vite Frontend & Express Backend",
   "main": "index.js",
   "scripts": {
-    "start": "node .",
+    "dev": "node .",
     "build": "cd ./src/dashboard && npm run build",
     "install-backend": "cd ./src/api && npm i",
     "install-frontend": "cd ./src/dashboard && npm i",
@@ -23,9 +23,9 @@
   "author": "Subie",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Subie1/ExpressViteTemplate/issues"
+    "url": "https://github.com/Subie1/ProjectEdgeWebsite/issues"
   },
-  "homepage": "https://github.com/Subie1/ExpressViteTemplate#readme",
+  "homepage": "https://github.com/Subie1/ProjectEdgeWebsite/tree/v2#readme",
   "dependencies": {
     "dotenv": "^16.3.1"
   }

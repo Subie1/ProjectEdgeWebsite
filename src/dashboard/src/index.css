@@ -1,26 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Long+Cang&family=Rubik&family=Rubik+Doodle+Shadow&family=Rowdies&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
     :root {
-        --text: #060509;
-        --background: #f8f6fb;
-        --primary: #7f61b0;
-        --secondary: #d2a6d3;
-        --accent: #c284b3;
+        --text: #150909;
+        --background: #ffffff;
+        --primary: #7c1d1f;
+        --secondary: #ededed;
+        --accent: #f26969;
     }
 
     .dark {
-        --text: #f6f5fa;
-        --background: #07050b;
-        --primary: #6c4f9c;
-        --secondary: #582c59;
-        --accent: #7b3d6b;
+        --text: #ffffff;
+        --background: #000000;
+        --primary: #e28485;
+        --secondary: #131313;
+        --accent: #950d0d;
     }
 }
 
 html, body, #root {
+    background-color: #131313;
     width: 100%;
     height: 100%;
 }
