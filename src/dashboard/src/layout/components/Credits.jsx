@@ -13,13 +13,13 @@ export default function Credits() {
         (async () => {
             let previous = parsed;
             for (const user of credits) {
-                const { data } = await axios.get(`/user/${user.id}`);
+                const { data } = await axios.get(`https://dashboard.botghost.com/api/public/tools/user_lookup/${user.id}`);
                 previous = { values: [...previous.values, { name: data.global_name, social: data.username, role: user.role }] }
             }
             setParsed(previous);
             setLoading(false);
         })()
-    }, [])
+    }, []);
 
     return (
         <div className="flex flex-col gap-2 items-center w-[calc(100%-100px)] justify-center border-t border-b border-primary p-6 rounded-lg">
