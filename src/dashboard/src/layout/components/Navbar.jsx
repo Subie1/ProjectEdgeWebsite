@@ -50,7 +50,7 @@ export default function Navbar() {
 			</div>
 			<div
 				onClick={() => OpenMenu()}
-				className="flex md:hidden px-4 py-2 border border-text rounded-full gap-2 items-center justify-center"
+				className="flex md:hidden px-4 z-30 cursor-pointer py-2 border border-text rounded-full gap-2 items-center justify-center"
 			>
 				<span>Menu</span>
 				<Icon name="TbMenu" className="text-xl" />
