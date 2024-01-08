@@ -4,7 +4,7 @@
   "description": "Basic template for having Vite Frontend & Express Backend",
   "main": "index.js",
   "scripts": {
-    "start": "node .",
+    "dev": "node .",
     "build": "cd ./src/dashboard && npm run build",
     "install-backend": "cd ./src/api && npm i",
     "install-frontend": "cd ./src/dashboard && npm i",
