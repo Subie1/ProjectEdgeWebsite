@@ -28,3 +28,4 @@ src/dashboard/dist.zip
 *.njsproj
 *.sln
 *.sw?
+.vercel
