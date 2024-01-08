@@ -48,7 +48,7 @@ export default function Home() {
 			<div className="gap-6 flex flex-col">
 				<header className="flex font-bold w-fit items-center justify-center gap-2">
 					<div className="w-2 h-2 bg-primary rounded-full"></div>
-					<span>The leading emulator for School of Dragons</span>
+					<span>Powered by cutting edge Sentinel flames</span>
 				</header>
 				<p className="text-2xl md:text-8xl text-pretty font-mono">
 					The revival of our favorite childhood game
