@@ -45,13 +45,13 @@ export default function Home() {
 
 	return (
 		<main className="w-full p-6 md:p-16 flex flex-col gap-24">
-			<div className="gap-6 flex flex-col">
+			<div className="gap-6 flex flex-col z-20">
 				<header className="flex font-bold w-fit items-center justify-center gap-2">
 					<div className="w-2 h-2 bg-primary rounded-full"></div>
 					<span>Powered by cutting edge Sentinel flames</span>
 				</header>
-				<p className="text-2xl md:text-8xl text-pretty font-mono">
-					The revival of our favorite childhood game
+				<p className="text-2xl md:text-5xl w-2/4 text-pretty font-mono">
+					The revival of our favorite game
 				</p>
 				<div className="w-full grid grid-cols-1 gap-6 md:gap-0 md:grid-cols-2">
 					<div className="text-pretty max-w-96 flex flex-col gap-2">
@@ -61,27 +61,35 @@ export default function Home() {
 						</span>
 						<span>- Your story is awaiting you fellow dragon rider.</span>
 					</div>
-					<div className="flex flex-col md:flex-row items-center justify-center gap-10">
-						<header className="flex items-center justify-center gap-2">
-							<Icon name="TbBalloon" className="text-2xl" />
-							<span>Android coming soon</span>
-						</header>
-						<a onClick={() => GoDownload()} className="flex group cursor-pointer">
-							<div className="transition-all duration-200 w-12 h-12 text-background group-hover:scale-0 bg-text rounded-2xl flex items-center justify-center">
-								<Icon name="TbArrowDown" />
-							</div>
-							<span className="px-4 group-hover:scale-95 transition-all duration-200 py-3 rounded-2xl bg-text text-background">
-								Download Now
-							</span>
-							<div className="transition-all duration-200 w-12 h-12 text-background scale-0 group-hover:scale-100 bg-text rounded-2xl flex items-center justify-center">
-								<Icon name="TbArrowDown" />
-							</div>
-						</a>
+					<div className="flex flex-col items-center justify-center gap-10">
+						<dir className="flex flex-row gap-2">
+							<header className="hidden md:flex items-center justify-center gap-2">
+								<Icon name="TbBalloon" className="text-2xl" />
+								<span>Android coming soon</span>
+							</header>
+							<a
+								onClick={() => GoDownload()}
+								className="flex group cursor-pointer hover:scale-105 transition-all duration-200"
+							>
+								<div className="transition-all group-hover:scale-0 duration-200 w-12 h-12 text-background bg-text rounded-2xl flex items-center justify-center">
+									<Icon name="TbArrowDown" />
+								</div>
+								<span className="px-4 transition-all duration-200 py-3 rounded-2xl bg-text text-background">
+									Download Now
+								</span>
+								<div className="transition-all scale-0 group-hover:scale-100 duration-200 w-12 h-12 text-background bg-text rounded-2xl flex items-center justify-center">
+									<Icon name="TbArrowDown" />
+								</div>
+							</a>
+						</dir>
 					</div>
 				</div>
 			</div>
 
-			<div id="download_container" className="w-full gap-6 md:gap-0 bg-text text-background flex flex-col md:flex-row p-10 rounded-2xl">
+			<div
+				id="download_container"
+				className="w-full gap-6 border-r border-r-primary border-l border-l-primary md:gap-0 z-20 text-text flex flex-col md:flex-row p-10 rounded-2xl"
+			>
 				<div className="flex-1 flex flex-col items-start justify-start">
 					<div className="flex items-center justify-center gap-2">
 						<div className="w-2 h-2 rounded-full bg-accent"></div>
@@ -92,7 +100,7 @@ export default function Home() {
 						dragon rider in all of Berk.
 					</span>
 				</div>
-				<div className="flex-1 flex flex-col gap-2 items-center justify-center text-background">
+				<div className="flex-1 flex flex-col gap-6 items-center justify-center">
 					<div className="flex gap-2">
 						<div
 							onClick={() => SetWindows()}
@@ -124,26 +132,34 @@ export default function Home() {
 						<div className="w-16 opacity-55 h-16 min-w-16 group cursor-pointer min-h-16 relative flex flex-col items-center justify-center rounded-xl border-2 border-primary">
 							<Icon name="TbBrandAndroid" className="text-2xl" />
 							<span className="text-xs">Android</span>
-							<div className="absolute md:top-2 bottom-16 scale-0 transition-all duration-300 md:left-16 text-xs text-nowrap w-24 group-hover:scale-100 bg-primary rounded-lg p-2 flex-nowrap items-center justify-center">
-								<p className="text-nowrap w-full text-text dark:text-background">
+							<div className="absolute md:top-2 h-fit bottom-16 scale-0 transition-all duration-300 md:left-16 text-xs text-nowrap w-24 group-hover:scale-100 bg-primary rounded-lg p-2 flex-nowrap items-center justify-center">
+								<p className="text-nowrap w-full h-full text-text dark:text-background">
 									Coming Soon!
 								</p>
 							</div>
 						</div>
 					</div>
-					<div className="flex flex-col gap-2">
+					<div className="flex flex-col md:flex-row gap-2">
 						{urls.map((url) => (
 							<a
 								key={url}
-								className="rounded-xl hover:scale-105 transition-all duration-200 text-center bg-primary px-4 py-2 text-background"
+								className="rounded-xl flex items-center justify-center gap-2 hover:scale-105 transition-all duration-200 text-center bg-text px-4 py-3 text-background"
 								href={url}
 								download
 							>
+								<Icon name="TbDownload" />
 								{message[urls.indexOf(url)]}
 							</a>
 						))}
 					</div>
 				</div>
+			</div>
+
+			<div className="absolute w-full h-full overflow-hidden flex items-center justify-center left-0 top-0 opacity-50 dark:opacity-20">
+				<img
+					src="/assets/toothless.png"
+					className="scale-150 md:scale-125"
+				/>
 			</div>
 		</main>
 	);

@@ -1,7 +1,11 @@
+import { useContext } from "react";
 import Icon from "./Icon";
 import NavElement from "./NavElement";
+import { context } from "../../lib/Context";
 
 export default function Navbar() {
+	const { theme, setTheme } = useContext(context);
+
 	function OpenMenu() {
 		const element = document.getElementById("navbar_items");
 		element.classList.remove("hidden");
@@ -14,22 +18,36 @@ export default function Navbar() {
 		document.body.classList.remove("overflow-hidden");
 	}
 
+	function ChangeTheme() {
+		if (theme === "dark") {
+            setTheme("light");
+        } else {
+            setTheme("dark");
+        }
+	}
+
 	return (
 		<nav className="w-full h-fit flex items-center justify-between">
-			<a
-				href="/"
-				className="cursor-pointer relative gap-4 px-2 py-1 group flex items-center justify-center"
-			>
+			<div className="cursor-pointer relative gap-4 px-2 py-1 group z-20 flex items-center justify-center">
 				<div className="text-accent text-2xl group">
 					<Icon
 						name="TbSword"
 						className="scale-110 group-hover:scale-125 transition-all duration-100"
 					/>
 				</div>
-				<span className="font-rubik tracking-widest font-thin text-lg fill-primary transition-all duration-200">
+				<a
+					href="/"
+					className="font-rubik flex gap-2 items-center justify-center tracking-widest font-thin text-lg fill-primary transition-all duration-200"
+				>
 					Project Edge
-				</span>
-			</a>
+				</a>
+				<a
+					onClick={() => ChangeTheme()}
+					className="text-xl cursor-pointer hover:scale-105 duration-200 transition-all"
+				>
+					<Icon name={theme === "dark" ? "TbSun" : "TbMoon"} />
+				</a>
+			</div>
 			<div
 				onClick={() => OpenMenu()}
 				className="flex md:hidden px-4 py-2 border border-text rounded-full gap-2 items-center justify-center"

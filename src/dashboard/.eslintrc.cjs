@@ -15,6 +15,7 @@ module.exports = {
     "process": true,
   },
 	rules: {
+		"react-hooks/exhaustive-deps": ["off"],
 		"react/prop-types": ["off"],
 		"react-refresh/only-export-components": ["off"],
 	},
