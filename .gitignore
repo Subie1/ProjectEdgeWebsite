@@ -16,6 +16,7 @@ lerna-debug.log*
 
 src/dashboard/dist
 src/dashboard/dist-ssr
+src/dashboard/dist.zip
 *.local
 
 .vscode/*

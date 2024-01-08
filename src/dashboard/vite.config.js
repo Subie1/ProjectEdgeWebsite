@@ -10,6 +10,11 @@ export default defineConfig({
                 target: `http://localhost:${process.env.BACKEND_PORT || 3333}`,
                 changeOrigin: true,
                 rewrite: path => path.replace(/^\/api/, "")
+            },
+            "/user": {
+                target: "https://dashboard.botghost.com/api/public/tools/user_lookup",
+                changeOrigin: true,
+                rewrite: path => path.replace(/^\/user/, "")
             }
         }
     }
